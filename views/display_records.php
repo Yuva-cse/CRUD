@@ -5,10 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Display Data</title>
     <style>
-        /* *{
-            margin:0px;
-            padding:0px;
-        } */
         table,tr,th,td{
             margin:auto;
             padding:10px;
@@ -125,6 +121,5 @@
         <?php
     }
     ?>
-   
 </body>
 </html>
