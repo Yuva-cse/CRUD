@@ -20,7 +20,6 @@ class register extends CI_Controller{
         so we can use the previouse HTML input name as variable
         */
         extract($_POST);
-        // echo "accessed";
         if($name&&$domain&&$volunteer_name&&$email&&$phone){
             $data=
             ['name'=>$name,
@@ -31,14 +30,12 @@ class register extends CI_Controller{
         ];
        $this->load->model('insertModel');
        $result=$this->insertModel->dataInsert($data);
-    //    if($result){
-    //     redirect(base_url('register/intern'));
-    //     // $this->load->view('registration_form');
-    //     // echo "data added successfully!";
-    // }
-    // else{
-    //     echo "Error while insert data";
-    // }
+        if($result){
+         redirect(base_url('register/intern'));
+     }
+     else{
+         echo "Error while insert data";
+     }
     }
     else{
         echo "Error while insert data";
